@@ -4,3 +4,7 @@ dist/
 .env.*
 !.env.example
 *.log
+
+# Never commit personal statements. Only generated fictional test fixtures are allowed.
+*.pdf
+!tests/fixtures/*.pdf

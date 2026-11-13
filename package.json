@@ -9,7 +9,8 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --test src/finance.test.js tests/*.test.js",
     "publish:static": "npm run build && node scripts/publish-static.mjs",
-    "test:browser": "node tests/mobile-flow.cjs"
+    "test:browser": "node tests/mobile-flow.cjs",
+    "test:modules": "node tests/module-loading.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.0",

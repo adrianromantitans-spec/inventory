@@ -1,5 +1,23 @@
-const CACHE='aura-inventory-shell-v3';
+const CACHE='aura-inventory-shell-v4';
 const ROOT=new URL('./',self.location).pathname;
-self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll([ROOT,ROOT+'icon.svg']))));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE&&(k.startsWith('aura-shell-')||k.startsWith('aura-inventory-shell-'))).map(k=>caches.delete(k))))));
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||new URL(e.request.url).pathname.startsWith('/api'))return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy))}return r}).catch(()=>caches.match(e.request).then(r=>r||(e.request.mode==='navigate'?caches.match(ROOT):Response.error()))))});
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll([ROOT,ROOT+'icon.svg']))));
+self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE&&(key.startsWith('aura-shell-')||key.startsWith('aura-inventory-shell-'))).map(key=>caches.delete(key))))));
+self.addEventListener('fetch',event=>{
+ const url=new URL(event.request.url);
+ if(event.request.method!=='GET'||url.origin!==location.origin||url.pathname.startsWith('/api')||url.pathname.startsWith(ROOT+'api/'))return;
+ event.respondWith((async()=>{
+   const cache=await caches.open(CACHE),cached=await cache.match(event.request),asset=url.pathname.startsWith(ROOT+'assets/');
+   // Content-hashed files never change. Prefer the verified copy already cached.
+   if(asset&&cached)return cached;
+   try{
+     const response=await fetch(event.request);
+     if(!response.ok)return cached||response;
+     const type=response.headers.get('content-type')||'';
+     // Never save a Pages HTML error/fallback as a JavaScript module.
+     if(asset&&/\.m?js$/.test(url.pathname)&&!/javascript|ecmascript/i.test(type))return cached||new Response('Module temporarily unavailable',{status:503});
+     await cache.put(event.request,response.clone());return response;
+   }catch{
+     return cached||(event.request.mode==='navigate'?await cache.match(ROOT):null)||Response.error();
+   }
+ })());
+});

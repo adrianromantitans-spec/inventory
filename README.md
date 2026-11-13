@@ -75,3 +75,11 @@ Si ya existe Chromium, usar `A_BROWSER_PATH=/usr/bin/chromium npm run test:brows
 Se intentó instalar WebKit para comprobar Safari, pero la política de red bloquea los dominios de descarga de Playwright. La emulación de iPhone usa Chromium; no equivale a una prueba en un iPhone físico o en Safari.
 
 Los presupuestos y ajustes del simulador se conservan por moneda dentro de la sesión; cambiar la moneda de una nueva importación no reinterpreta ni borra los anteriores. Corregir fecha, importe o descripción de un movimiento lo vuelve a marcar para revisar su clasificación. Ninguna actualización de la app recarga automáticamente una sesión con datos en memoria.
+
+## Carga de módulos y actualizaciones
+
+Los componentes con nombre hash de publicaciones recientes se conservan en `assets/` y se copian también a `dist` para que una pestaña abierta no pierda módulos durante un despliegue. No se deben eliminar en cada compilación. El lector auxiliar PDF se publica como `.js` para que Pages lo sirva como JavaScript. El service worker prefiere los módulos inmutables guardados, no almacena HTML como JavaScript y excluye las rutas API. No recarga automáticamente las sesiones con movimientos.
+
+Un fallo al cargar el lector muestra un aviso traducido, permite reintentar y ofrece abrir la app actualizada en otra pestaña. La sesión original conserva sus datos; no se copian al nuevo contexto ni se suben a ningún sitio. Se puede volver a elegir el mismo archivo después de un error.
+
+Con preview activo: `A_BROWSER_PATH=/usr/bin/chromium npm run test:modules` verifica lector online/offline, caché del worker `.js`, módulos de versiones anteriores y recuperación de un fallo de carga sin borrar importaciones. `A_TEST_URL` permite probar la publicación estática local.

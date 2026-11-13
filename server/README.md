@@ -1,17 +1,18 @@
-# Contrato de integración bancaria (pendiente de implementación)
+# Integración bancaria pendiente
 
-El cliente actual solo usa datos demo. `src/banking.js` define una interfaz futura, no una integración activa. No activar datos reales en este frontend sin completar estos requisitos.
+La aplicación estática funciona exclusivamente con extractos abiertos localmente. No incluye servidor de autenticación, cifrado persistente ni proveedor Open Banking operativo. `src/banking.js` define una interfaz futura, no una conexión activa.
 
-- Autenticación de usuario en servidor; sesiones HttpOnly, Secure, SameSite, protección CSRF, límites de solicitudes y expiración. WebAuthn opcional con desafíos y verificación en servidor.
-- Proveedor Open Banking autorizado que confirme cobertura de Banca Transilvania y permisos de solo lectura. No recoger credenciales bancarias ni PAN/CVV.
-- `GET /api/banking/status`: sesión obligatoria, devolver estado de consentimiento (no configurado, activo, caducado, revocado) y fecha de última sincronización.
-- `POST /api/banking/connect`: sesión + CSRF, crear consentimiento y redirigir al proveedor con state de un solo uso y PKCE cuando corresponda.
-- Retorno OAuth: validar state, emisor y redirección; intercambiar código exclusivamente en servidor.
-- `POST /api/banking/sync`: sesión + CSRF, comprobar consentimiento y límites del proveedor, importar páginas de movimientos con cursor, actualizar saldos y guardar timestamp solo al completar la sincronización. Clave única proveedor/cuenta/ID de movimiento; manejar transacciones pendientes y contabilizadas según contrato del proveedor.
+Antes de conectar Banca Transilvania:
+
+- Elegir proveedor autorizado con cobertura y consentimiento de solo lectura.
+- Implementar sesiones HttpOnly, Secure y SameSite, expiración, límites y CSRF. WebAuthn requiere desafíos verificados en servidor.
+- `GET /api/banking/status`: sesión obligatoria, devolver estado de consentimiento y última sincronización.
+- `POST /api/banking/connect`: crear consentimiento y redirigir con state de un solo uso y PKCE según proveedor.
+- Callback: validar state, emisor y retorno; intercambiar código solo en servidor.
+- `POST /api/banking/sync`: comprobar consentimiento, paginar movimientos con cursor, deduplicar por proveedor/cuenta/ID y guardar timestamp únicamente tras completar la sincronización.
 - `DELETE /api/banking/connection`: revocar consentimiento y eliminar tokens.
-- Tokens, cuentas y movimientos cifrados con claves gestionadas fuera de la base de datos, rotación, control de acceso y retención. Nunca incluirlos en logs.
-- Datos reales nunca en localStorage ni en caché de service worker; respuestas Cache-Control: no-store. Separar completamente tablas y rutas demo/real.
-- Al abrir una sesión autenticada, comprobar estado y sincronizar solo con consentimiento vigente. Si caduca, pedir reconexión sin reintentos automáticos ilimitados.
-- Credenciales y secretos exclusivamente en entorno seguro del servidor. Elegir proveedor, infraestructura y almacenamiento antes de implementar.
+- Cifrar tokens y datos persistentes con claves externas a la base de datos, rotación, retención y acceso restringido. Nunca registrar tokens, documentos ni movimientos en logs.
+- No almacenar datos bancarios en localStorage ni service worker; respuestas `Cache-Control: no-store`.
+- Al caducar el consentimiento, pedir reconexión sin reintentos ilimitados. No recoger contraseñas bancarias, PAN completos ni CVV.
 
-No se incluye backend operativo, cifrado de datos reales ni autenticación real en esta entrega demo.
+Los extractos abiertos en el navegador no constituyen una sincronización bancaria ni acreditan el saldo actual de la cuenta.

@@ -8,3 +8,5 @@ dist/
 # Never commit personal statements. Only generated fictional test fixtures are allowed.
 *.pdf
 !tests/fixtures/*.pdf
+test-results/
+playwright-report/

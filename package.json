@@ -8,7 +8,8 @@
     "build": "vite build && node scripts/finalize-build.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --test src/finance.test.js tests/*.test.js",
-    "publish:static": "npm run build && node scripts/publish-static.mjs"
+    "publish:static": "npm run build && node scripts/publish-static.mjs",
+    "test:browser": "node tests/mobile-flow.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.0",
@@ -22,6 +23,7 @@
     "vite": "^7.2.0"
   },
   "devDependencies": {
-    "pdf-lib": "^1.17.1"
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.65.0"
   }
 }

@@ -2,8 +2,8 @@ import {parsePositionedPages} from './pdf-layout.js';
 export async function extractPdf(file){
   if(file.size>20*1024*1024)throw new Error('El archivo supera el límite de 20 MB');
   // PDF.js and its worker are bundled locally. No CDN, upload, OCR or external API.
-  const pdfjs=await import('pdfjs-dist');
-  const {default:worker}=await import('pdfjs-dist/build/pdf.worker.min.mjs?url');
+  const pdfjs=await import('pdfjs-dist/legacy/build/pdf.mjs');
+  const {default:worker}=await import('pdfjs-dist/legacy/build/pdf.worker.min.mjs?url');
   pdfjs.GlobalWorkerOptions.workerSrc=worker;
   const task=pdfjs.getDocument({data:new Uint8Array(await file.arrayBuffer()),isEvalSupported:false,useSystemFonts:true,disableFontFace:true});
   let doc;

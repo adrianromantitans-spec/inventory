@@ -3,6 +3,6 @@ import {cp,mkdir,writeFile,rm} from 'node:fs/promises';
 await rm('assets',{recursive:true,force:true});
 await mkdir('assets',{recursive:true});
 await cp('dist/assets','assets',{recursive:true});
-for(const name of ['index.html','icon.svg','manifest.webmanifest','sw.js'])await cp(`dist/${name}`,name);
+for(const name of ['index.html','icon.svg','manifest.webmanifest','sw.js','apple-touch-icon.png','icon-192.png','icon-512.png'])await cp(`dist/${name}`,name);
 await writeFile('.nojekyll','');
 console.log('Versión compilada preparada en la raíz para GitHub Pages.');

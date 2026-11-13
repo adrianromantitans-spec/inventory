@@ -143,7 +143,7 @@ Privacidad y seguridad|Privacy and security|Confidențialitate și securitate
 Datos utilizados|Data used|Date utilizate
 Almacenamiento|Storage|Stocare
 Siempre a mano|Always at hand|Mereu la îndemână
-Instala Aura desde el menú del navegador. En iPhone: Compartir → Añadir a pantalla de inicio. En Android: menú → Instalar aplicación.|Install Aura from your browser menu. On iPhone: Share → Add to Home Screen. On Android: menu → Install app.|Instalează Aura din meniul browserului. Pe iPhone: Partajare → Adaugă pe ecranul principal. Pe Android: meniu → Instalează aplicația.
+Instala A desde el menú del navegador. En iPhone: Compartir → Añadir a pantalla de inicio. En Android: menú → Instalar aplicación.|Install A from your browser menu. On iPhone: Share → Add to Home Screen. On Android: menu → Install app.|Instalează A din meniul browserului. Pe iPhone: Partajare → Adaugă pe ecranul principal. Pe Android: meniu → Instalează aplicația.
 EUR · ESPAÑOL · MODO OSCURO|EUR · ENGLISH · DARK MODE|EUR · ROMÂNĂ · MOD ÎNTUNECAT
 Un poco más cerca de lo que importa.|A little closer to what matters.|Puțin mai aproape de ceea ce contează.
 Volver a mi cartera|Back to my wallet|Înapoi la portofel
@@ -282,3 +282,119 @@ Importe objetivo|Target amount|Sumă țintă
 Ahorro actual|Current savings|Economii actuale
 Marcar como recurrente|Mark as recurring|Marchează ca recurent
 `.trim().split('\n')){const[es,en,ro]=line.split('|');dictionary.set(es,{en,ro})}
+for(const line of `
+Cuenta anterior|Previous account|Contul anterior
+Cuenta siguiente|Next account|Contul următor
+Ver movimientos|View transactions|Vezi tranzacțiile
+Saldos de cierre de tus extractos, no tarjetas bancarias conectadas.|Statement closing balances, not connected bank cards.|Solduri finale din extrase, nu carduri bancare conectate.
+Extracto listo|Statement ready|Extras pregătit
+Crear mi plan|Create my plan|Creează planul meu
+Cerrar confirmación|Dismiss confirmation|Închide confirmarea
+ASISTENTE LOCAL|LOCAL ASSISTANT|ASISTENT LOCAL
+Un plan que parte de ti.|A plan that starts with you.|Un plan care începe cu tine.
+Tus datos. Tu objetivo. Tu ritmo.|Your data. Your goal. Your pace.|Datele tale. Obiectivul tău. Ritmul tău.
+Tu plan de ahorro|Your savings plan|Planul tău de economii
+Editar plan|Edit plan|Editează planul
+Ajustar plan|Adjust plan|Ajustează planul
+Eliminar plan|Delete plan|Șterge planul
+Plan guardado|Plan saved|Plan salvat
+Plan eliminado|Plan deleted|Plan șters
+Tus datos han cambiado. Revisa y recalcula el plan.|Your data has changed. Review and recalculate the plan.|Datele tale s-au schimbat. Verifică și recalculează planul.
+Objetivo alcanzado según el ahorro que has indicado.|Goal reached based on the savings you entered.|Obiectiv atins conform economiilor pe care le-ai introdus.
+Proyección sin intereses. Depende de mantener la aportación y el presupuesto.|Projection without interest. It depends on maintaining contributions and your budget.|Proiecție fără dobândă. Depinde de menținerea contribuțiilor și a bugetului.
+Proyección|Projection|Proiecție
+Ahorro proyectado|Projected savings|Economii estimate
+Mes|Month|Lună
+Asistente de ahorro local|Local savings assistant|Asistent local de economii
+Primero, tus datos|First, your data|Mai întâi, datele tale
+¿Qué quieres conseguir?|What do you want to achieve?|Ce vrei să realizezi?
+Tu camino, a tu ritmo|Your path, your pace|Drumul tău, ritmul tău
+Paso|Step|Pas
+Se calcula aquí. Ningún dato sale de tu navegador.|Calculated here. No data leaves your browser.|Calculat aici. Nicio dată nu părăsește browserul.
+Necesito tu extracto para empezar.|I need your statement to get started.|Am nevoie de extrasul tău pentru a începe.
+No crearé cifras ni recomendaciones sin tus datos.|I will not create figures or recommendations without your data.|Nu voi crea cifre sau recomandări fără datele tale.
+Primer mes|First month|Prima lună
+Último mes|Last month|Ultima lună
+Revisión de movimientos|Transaction review|Verificarea tranzacțiilor
+pendientes|pending|în așteptare
+Revisado|Reviewed|Verificat
+¿Qué tipo de movimiento es?|What kind of transaction is this?|Ce tip de tranzacție este?
+Clasificación para el plan|Classification for planning|Clasificare pentru plan
+Elige una clasificación|Choose a classification|Alege o clasificare
+Aprendido de tus revisiones|Learned from your reviews|Învățat din verificările tale
+Confirmar|Confirm|Confirmă
+No asumo que un abono sea una nómina ni que un cargo sea fijo. Tú lo confirmas.|I do not assume a credit is salary or a debit is fixed. You confirm it.|Nu presupun că o încasare este salariu sau că o plată este fixă. Tu confirmi.
+Revisar otro|Review another|Verifică alta
+Mi extracto está incompleto; indicaré mi presupuesto mensual.|My statement is incomplete; I will enter my monthly budget.|Extrasul meu este incomplet; voi introduce bugetul lunar.
+Ingresos habituales|Regular income|Venituri regulate
+Ingreso habitual|Regular income|Venit regulat
+Ingreso puntual|One-off income|Venit ocazional
+Gasto fijo|Fixed expense|Cheltuială fixă
+Gasto variable|Variable expense|Cheltuială variabilă
+Suscripción|Subscription|Abonament
+Transferencia interna|Internal transfer|Transfer intern
+Gastos fijos|Fixed expenses|Cheltuieli fixe
+Gastos variables|Variable expenses|Cheltuieli variabile
+He confirmado estos cuatro importes mensuales; no son totales del extracto.|I confirmed these four monthly amounts; they are not statement totals.|Am confirmat aceste patru sume lunare; nu sunt totalurile extrasului.
+He importado todos los movimientos de estos meses completos, de todas mis cuentas.|I imported every transaction for these full months, across all my accounts.|Am importat toate tranzacțiile pentru aceste luni complete, din toate conturile mele.
+Cómo funciona la inteligencia local|How local intelligence works|Cum funcționează inteligența locală
+El clasificador aprende por similitud de tus ejemplos confirmados y se abstiene si hay dudas. No usa un modelo generativo ni un servicio externo. El plan usa cálculos explicables y no adivina datos ausentes.|The classifier learns from similarity to your confirmed examples and abstains when uncertain. No generative model or external service is used. Planning uses explainable calculations and does not guess missing data.|Clasificatorul învață din similitudinea exemplelor tale confirmate și se abține când există îndoieli. Nu utilizează un model generativ sau un serviciu extern. Planul folosește calcule explicabile, fără a ghici datele lipsă.
+Continuar con mi objetivo|Continue to my goal|Continuă cu obiectivul meu
+Elegir objetivo existente|Choose an existing goal|Alege un obiectiv existent
+¿Para qué quieres ahorrar?|What are you saving for?|Pentru ce vrei să economisești?
+¿Para cuándo?|By when?|Până când?
+Colchón mensual que no quieres comprometer|Monthly buffer you want to protect|Rezerva lunară pe care vrei să o protejezi
+¿Cuánto quieres aportar al mes?|How much do you want to save monthly?|Cât vrei să economisești lunar?
+Calcular según mi objetivo|Calculate from my goal|Calculează după obiectiv
+La primera aportación se proyecta el día 1 del próximo mes. No se mueve dinero.|The first contribution is projected for the first day of next month. No money is moved.|Prima contribuție este proiectată pentru prima zi a lunii următoare. Nu se transferă bani.
+Revisar datos|Review data|Verifică datele
+Calculando…|Calculating…|Se calculează…
+Generar mi plan|Generate my plan|Generează planul meu
+Capacidad tras el colchón|Capacity after buffer|Capacitate după rezervă
+Alternativas de ahorro|Savings alternatives|Alternative de economisire
+Más flexible|More flexible|Mai flexibil
+Más rápida|Faster|Mai rapid
+Equilibrada|Balanced|Echilibrat
+de margen|left over|rămași
+La proyección encaja en tu plazo.|The projection fits your deadline.|Proiecția se încadrează în termen.
+Esta alternativa necesita más tiempo.|This alternative needs more time.|Această alternativă necesită mai mult timp.
+La flexible propone el 75 % de tu aportación deseada, con un límite del 50 % de tu capacidad. La equilibrada limita tu aportación al 80 % de la capacidad. La rápida busca acelerar con hasta el 125 % de tu aportación deseada, sin superar la capacidad disponible.|Flexible uses 75% of your desired contribution, capped at 50% of capacity. Balanced caps it at 80% of capacity. Faster uses up to 125% of your desired contribution, without exceeding capacity.|Varianta flexibilă folosește 75% din contribuția dorită, până la 50% din capacitate. Varianta echilibrată o limitează la 80% din capacitate. Varianta rapidă folosește până la 125% din contribuția dorită, fără a depăși capacitatea.
+Para tu plazo harían falta|Your deadline would require|Pentru termenul tău ar fi necesari
+No se presupone reducir tus gastos ni obtener intereses.|No spending reductions or interest are assumed.|Nu se presupun reduceri de cheltuieli sau dobânzi.
+Ver cálculo y limitaciones|See calculation and limitations|Vezi calculul și limitările
+Importes clasificados ÷ meses completos confirmados. Se excluyen transferencias e ingresos puntuales. Capacidad = ingresos habituales − fijos − variables − suscripciones − colchón.|Classified totals ÷ confirmed full months. Transfers and one-off income are excluded. Capacity = regular income − fixed − variable − subscriptions − buffer.|Totaluri clasificate ÷ luni complete confirmate. Transferurile și veniturile ocazionale sunt excluse. Capacitate = venit regulat − fixe − variabile − abonamente − rezervă.
+Ajustar objetivo y aportación|Adjust goal and contribution|Ajustează obiectivul și contribuția
+Guardar mi plan|Save my plan|Salvează planul meu
+Son escenarios orientativos, no garantías ni asesoramiento financiero profesional.|These are illustrative scenarios, not guarantees or professional financial advice.|Acestea sunt scenarii orientative, nu garanții sau consultanță financiară profesională.
+Pendiente de clasificar|Awaiting classification|În așteptarea clasificării
+Pendiente de revisar|Awaiting review|În așteptarea verificării
+Detalle|Details|Detalii
+Guardar cambios|Save changes|Salvează modificările
+Movimiento actualizado|Transaction updated|Tranzacție actualizată
+Movimiento eliminado|Transaction deleted|Tranzacție ștearsă
+Eliminar movimiento|Delete transaction|Șterge tranzacția
+Se eliminará este movimiento de la sesión. Se recalcularán las estadísticas y el plan quedará pendiente de revisión.|This transaction will be deleted from the session. Statistics will update and the plan will need review.|Această tranzacție va fi ștearsă din sesiune. Statisticile se vor actualiza și planul va necesita verificare.
+Se elimina solo el plan. Conservas tu objetivo y tus movimientos.|Only the plan is deleted. Your goal and transactions are kept.|Se șterge doar planul. Obiectivul și tranzacțiile rămân.
+Ya existe un movimiento con esos datos.|A transaction with those details already exists.|Există deja o tranzacție cu aceste date.
+Selecciona el periodo que has importado.|Choose the period you imported.|Alege perioada importată.
+Periodo no válido.|Invalid period.|Perioadă nevalidă.
+Selecciona entre 1 y 120 meses.|Choose between 1 and 120 months.|Alege între 1 și 120 de luni.
+Importa un extracto antes de crear un plan.|Import a statement before creating a plan.|Importă un extras înainte de a crea un plan.
+No hay movimientos en ese periodo.|No transactions in that period.|Nu există tranzacții în această perioadă.
+Revisa la clasificación de los movimientos pendientes.|Review the classification of pending transactions.|Verifică clasificarea tranzacțiilor în așteptare.
+Completa los cuatro importes mensuales.|Complete all four monthly amounts.|Completează toate cele patru sume lunare.
+Confirma los importes mensuales que has indicado.|Confirm the monthly amounts you entered.|Confirmă sumele lunare introduse.
+Los importes mensuales los has definido tú; no son una estimación del extracto.|You defined the monthly amounts; they are not estimated from the statement.|Tu ai definit sumele lunare; nu sunt estimate din extras.
+Confirma que el periodo incluye todas tus cuentas e ingresos y gastos.|Confirm the period includes all accounts, income and expenses.|Confirmă că perioada include toate conturile, veniturile și cheltuielile.
+Faltan meses del periodo. Importa los extractos o indica tus importes mensuales.|Some months are missing. Import them or enter your monthly amounts.|Lipsesc luni din perioadă. Importă-le sau introdu sumele lunare.
+Menos de tres meses: la estimación puede variar mucho.|Less than three months: estimates may vary considerably.|Mai puțin de trei luni: estimarea poate varia mult.
+No hay ingresos habituales confirmados. Revisa los ingresos o indica tu presupuesto mensual.|No confirmed regular income. Review income or enter your monthly budget.|Nu există venituri regulate confirmate. Verifică veniturile sau introdu bugetul lunar.
+Completa el objetivo, el importe y el ahorro actual.|Complete your goal, target amount and current savings.|Completează obiectivul, suma țintă și economiile actuale.
+El objetivo y los extractos deben usar la misma moneda.|The goal and statements must use the same currency.|Obiectivul și extrasele trebuie să utilizeze aceeași monedă.
+Elige una fecha a partir de la próxima aportación mensual.|Choose a date on or after the next monthly contribution.|Alege o dată începând cu următoarea contribuție lunară.
+Indica un colchón mensual válido.|Enter a valid monthly buffer.|Introdu o rezervă lunară validă.
+No queda capacidad de ahorro. Ajusta el presupuesto o el colchón antes de generar un plan.|No savings capacity remains. Adjust the budget or buffer first.|Nu rămâne capacitate de economisire. Ajustează mai întâi bugetul sau rezerva.
+Indica una aportación mensual positiva.|Enter a positive monthly contribution.|Introdu o contribuție lunară pozitivă.
+La aportación no permite un plazo razonable. Ajusta el objetivo o el presupuesto.|The contribution does not allow a reasonable timeframe. Adjust the goal or budget.|Contribuția nu permite un termen rezonabil. Ajustează obiectivul sau bugetul.
+`.trim().split('\n')){const[es,en,ro]=line.split('|');dictionary.set(es,{en,ro})}
+dictionary.set('Saldo no disponible',{en:'Balance unavailable',ro:'Sold indisponibil'});

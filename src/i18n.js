@@ -281,6 +281,10 @@ Solo tus datos|Only your data|Doar datele tale
 Importe objetivo|Target amount|Sumă țintă
 Ahorro actual|Current savings|Economii actuale
 Marcar como recurrente|Mark as recurring|Marchează ca recurent
+Saldo al cierre|Closing balance|Sold final
+Vista anterior|Previous view|Vizualizare anterioară
+Vista siguiente|Next view|Vizualizare următoare
+Navegación entre vistas|View navigation|Navigare între vizualizări
 `.trim().split('\n')){const[es,en,ro]=line.split('|');dictionary.set(es,{en,ro})}
 for(const line of `
 Cuenta anterior|Previous account|Contul anterior

@@ -1,5 +1,5 @@
-const CACHE='aura-shell-v2';
+const CACHE='aura-inventory-shell-v3';
 const ROOT=new URL('./',self.location).pathname;
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll([ROOT,ROOT+'icon.svg']))));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE&&(k.startsWith('aura-shell-')||k.startsWith('aura-inventory-shell-'))).map(k=>caches.delete(k))))));
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin||new URL(e.request.url).pathname.startsWith('/api'))return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy))}return r}).catch(()=>caches.match(e.request).then(r=>r||(e.request.mode==='navigate'?caches.match(ROOT):Response.error()))))});

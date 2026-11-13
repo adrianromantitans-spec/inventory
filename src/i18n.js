@@ -26,15 +26,11 @@ Entiende tus hábitos. Decide con claridad.|Understand your habits. Decide with 
 Haz espacio para lo que de verdad importa.|Make room for what really matters.|Fă loc pentru ceea ce contează cu adevărat.
 Tu espacio, a tu manera.|Your space, your way.|Spațiul tău, în felul tău.
 Tu tranquilidad, primero|Your peace of mind comes first|Liniștea ta, pe primul loc
-Modo demo · sin datos bancarios|Demo mode · no bank data|Mod demo · fără date bancare
-DEMOSTRACIÓN|DEMO|DEMONSTRAȚIE
 Balance total|Total balance|Sold total
 Ocultar saldo|Hide balance|Ascunde soldul
 flujo neto del mes|net cash flow this month|flux net lunar
 Ingresos|Income|Venituri
 Gastos|Expenses|Cheltuieli
-Datos ficticios|Fictional data|Date fictive
-Actualizando demo…|Refreshing demo…|Se actualizează demonstrația…
 Actualizado|Updated|Actualizat
 Tu cartera|Your wallet|Portofelul tău
 Ver tarjetas|View cards|Vezi cardurile
@@ -58,9 +54,6 @@ Pequeños pasos, grandes metas|Small steps, big goals|Pași mici, obiective mari
 Crear objetivo|Create goal|Creează un obiectiv
 Cuenta principal|Main account|Cont principal
 Cuenta viajes|Travel account|Cont de călătorii
-Cuenta del día a día|Everyday account|Cont de zi cu zi
-Tu próxima aventura|Your next adventure|Următoarea ta aventură
-Cartera de demostración. Estas tarjetas no están conectadas a una cuenta bancaria.|Demo wallet. These cards are not connected to a bank account.|Portofel demonstrativ. Aceste carduri nu sunt conectate la un cont bancar.
 Saldo de la cuenta|Account balance|Soldul contului
 Conecta con tu tranquilidad|Connect with peace of mind|Conectează-te în siguranță
 La conexión de solo lectura con Banca Transilvania requiere un proveedor Open Banking autorizado.|Read-only Banca Transilvania access requires an authorised Open Banking provider.|Accesul doar pentru citire la Banca Transilvania necesită un furnizor Open Banking autorizat.
@@ -113,7 +106,6 @@ Suma de los cargos clasificados como suscripciones. Revisa los movimientos para 
 Mayores gastos|Largest expenses|Cele mai mari cheltuieli
 Gasto por semana|Weekly spending|Cheltuieli săptămânale
 Pagos recurrentes identificados|Identified recurring payments|Plăți recurente identificate
-Cargos marcados como recurrentes en la muestra demo.|Charges marked as recurring in the demo sample.|Plăți marcate ca recurente în exemplul demo.
 Gasto por comercio|Spending by merchant|Cheltuieli pe comercianți
 DISEÑA TU FUTURO|DESIGN YOUR FUTURE|CONSTRUIEȘTE-ȚI VIITORUL
 Un hábito que crece contigo.|A habit that grows with you.|Un obicei care crește cu tine.
@@ -144,39 +136,26 @@ Sin límite|No limit|Fără limită
 gastados|spent|cheltuiți
 Estimación de cierre|Closing estimate|Estimare la închidere
 Conexiones bancarias|Bank connections|Conexiuni bancare
-Sin conexión · Solo demostración|Disconnected · Demo only|Neconectat · Doar demonstrație
 La integración real está deshabilitada. Es necesario configurar un proveedor autorizado en el servidor, autenticación y consentimiento de solo lectura.|Live integration is disabled. An authorised server-side provider, authentication and read-only consent are required.|Integrarea reală este dezactivată. Sunt necesare un furnizor autorizat pe server, autentificare și consimțământ doar pentru citire.
 Cómo conectar mi banco|How to connect my bank|Cum îmi conectez banca
 No solicitamos contraseñas bancarias, números completos de tarjeta ni CVV.|We never request bank passwords, full card numbers or CVVs.|Nu solicităm parole bancare, numere complete de card sau CVV.
 Privacidad y seguridad|Privacy and security|Confidențialitate și securitate
 Datos utilizados|Data used|Date utilizate
-Ficticios|Fictional|Fictive
 Almacenamiento|Storage|Stocare
-Local · solo demo|Local · demo only|Local · doar demo
-El modo demo no incluye autenticación real ni almacena datos bancarios. Para producción se requiere una sesión segura y cifrado en el servidor. La biometría requiere WebAuthn, HTTPS y verificación del servidor.|Demo mode has no real authentication or stored bank data. Production requires secure sessions and server-side encryption. Biometrics require WebAuthn, HTTPS and server verification.|Modul demo nu include autentificare reală sau date bancare stocate. Producția necesită sesiuni sigure și criptare pe server. Biometria necesită WebAuthn, HTTPS și verificare pe server.
-Bloquear vista demo|Lock demo view|Blochează vizualizarea demo
-Tus datos de demostración|Your demo data|Datele tale demonstrative
-Exporta los movimientos ficticios o restaura la experiencia inicial.|Export fictional transactions or restore the initial experience.|Exportă tranzacțiile fictive sau restabilește experiența inițială.
-Exportar demo|Export demo|Exportă demonstrația
-Restablecer datos demo|Reset demo data|Resetează datele demo
 Siempre a mano|Always at hand|Mereu la îndemână
 Instala Aura desde el menú del navegador. En iPhone: Compartir → Añadir a pantalla de inicio. En Android: menú → Instalar aplicación.|Install Aura from your browser menu. On iPhone: Share → Add to Home Screen. On Android: menu → Install app.|Instalează Aura din meniul browserului. Pe iPhone: Partajare → Adaugă pe ecranul principal. Pe Android: meniu → Instalează aplicația.
 EUR · ESPAÑOL · MODO OSCURO|EUR · ENGLISH · DARK MODE|EUR · ROMÂNĂ · MOD ÎNTUNECAT
 Un poco más cerca de lo que importa.|A little closer to what matters.|Puțin mai aproape de ceea ce contează.
-Espacio de demostración|Demo space|Spațiu demonstrativ
 Volver a mi cartera|Back to my wallet|Înapoi la portofel
-Saldo de cuenta · demostración|Account balance · demo|Soldul contului · demo
 Cerrar|Close|Închide
 Tu objetivo|Your goal|Obiectivul tău
 Algo que te ilusiona|Something to look forward to|Ceva care te inspiră
 Nombre|Name|Nume
-Mi próximo viaje|My next trip|Următoarea mea călătorie
 Importe objetivo (€)|Target amount (€)|Sumă țintă (€)
 Ahorro actual (€)|Current savings (€)|Economii actuale (€)
 Fecha objetivo|Target date|Data țintă
 Guardar objetivo|Save goal|Salvează obiectivul
 Eliminar objetivo|Delete goal|Șterge obiectivul
-DETALLE DEL MOVIMIENTO DEMO|DEMO TRANSACTION DETAILS|DETALIILE TRANZACȚIEI DEMO
 Corregir categoría|Correct category|Corectează categoria
 La clasificación se guarda solo en este navegador y actualiza las estadísticas.|Categories are saved only in this browser and update analytics.|Categoriile se salvează doar în acest browser și actualizează statisticile.
 Elige tu mes|Choose your month|Alege luna
@@ -188,24 +167,13 @@ El backend deberá verificar tu sesión, crear el consentimiento con el proveedo
 Entendido|Understood|Am înțeles
 Notificaciones|Notifications|Notificări
 Todo en calma.|All quiet.|Totul este în regulă.
-No tienes notificaciones nuevas. Estás explorando una demostración con datos ficticios.|No new notifications. You are exploring a demo with fictional data.|Nu ai notificări noi. Explorezi o demonstrație cu date fictive.
 ¿Volver a empezar?|Start again?|O iei de la capăt?
-Se eliminarán tus objetivos, clasificaciones y ajustes de esta demostración local.|Your goals, categories and local demo settings will be deleted.|Obiectivele, categoriile și setările demonstrației locale vor fi șterse.
-Sí, restablecer demo|Yes, reset demo|Da, resetează demonstrația
 Conservar mis datos|Keep my data|Păstrează datele mele
 Un momento para ti.|A moment for yourself.|Un moment pentru tine.
-Vista demo bloqueada. Esta pantalla es una cortina de privacidad, no una autenticación.|Demo view locked. This screen is a privacy curtain, not authentication.|Vizualizarea demo este blocată. Acesta este un paravan vizual, nu autentificare.
-Continuar en demostración|Continue demo|Continuă demonstrația
 Objetivo guardado|Goal saved|Obiectiv salvat
-Exportación de datos demo completada|Demo data exported|Datele demo au fost exportate
-Datos de demostración actualizados. No se ha contactado con tu banco.|Demo data refreshed. Your bank has not been contacted.|Datele demo au fost actualizate. Banca ta nu a fost contactată.
-Actualizar demostración|Refresh demo|Actualizează demonstrația
-Un viaje inolvidable|An unforgettable trip|O călătorie de neuitat
-Fondo de tranquilidad|Peace-of-mind fund|Fond de siguranță
 Importar extracto|Import statement|Importă extras
 Importación local|Local import|Import local
 Solo en memoria|In memory only|Doar în memorie
-Volver a demo|Back to demo|Înapoi la demo
 Importados|Imported|Importate
 Vaciar importaciones|Clear imports|Șterge importurile
 Vista previa editable|Editable preview|Previzualizare editabilă
@@ -231,8 +199,6 @@ No hay saldos inicial y final verificables. No se puede comprobar la integridad 
 He revisado la diferencia y quiero continuar.|I have reviewed the difference and want to continue.|Am verificat diferența și doresc să continui.
 Corrige las filas marcadas antes de confirmar.|Correct the marked rows before confirming.|Corectează rândurile marcate înainte de confirmare.
 Confirma que has revisado todas las filas del extracto.|Confirm that you have reviewed every statement row.|Confirmă că ai verificat toate rândurile extrasului.
-Datos locales importados, separados de la demostración. Se borran al recargar.|Local imported data, separate from the demo. Cleared on reload.|Date locale importate, separate de demonstrație. Se șterg la reîncărcare.
-Los saldos de las tarjetas pertenecen a la demo, no al extracto.|Card balances belong to the demo, not to the statement.|Soldurile cardurilor aparțin demonstrației, nu extrasului.
 No hay sincronización bancaria en el modo local.|Bank synchronisation is unavailable in local mode.|Sincronizarea bancară nu este disponibilă în modul local.
 No se ha detectado una tabla compatible|No compatible table was detected|Nu a fost detectat un tabel compatibil
 Fecha no válida|Invalid date|Dată nevalidă
@@ -263,15 +229,56 @@ const fragments=[
  ['El objetivo supera tu excedente mensual de ','The goal exceeds your monthly surplus of ','Obiectivul depășește excedentul lunar de '],
  ['Has superado el presupuesto en ','You have exceeded your budget by ','Ai depășit bugetul cu '],
  ['Presupuesto ','Budget ','Buget '],['Actualizado ','Updated ','Actualizat '],['Semana ','Week ','Săptămâna '],['/mes para el','/month by','/lună până la'],
- ['Compara meses completos de datos demo.','Compares complete months of demo data.','Compară luni complete de date demo.'],
  ['de gasto','spending','cheltuieli'],
- ['· Saldo demo actual + ingresos − gastos del mes seleccionado. Escenario ilustrativo: no representa un saldo futuro confirmado ni contempla cargos desconocidos.','· Current demo balance + income − selected month expenses. Illustrative scenario, not a confirmed future balance; unknown charges are excluded.','· Soldul demo actual + venituri − cheltuielile lunii selectate. Scenariu ilustrativ, nu un sold viitor confirmat; plățile necunoscute sunt excluse.'],
  ];
 export function t(value){if(typeof value!=='string'||language==='es')return value;const trimmed=value.trim();const hit=dictionary.get(trimmed);if(hit)return value.replace(trimmed,hit[language]);let result=value;for(const [es,en,ro]of fragments)result=result.split(es).join(language==='en'?en:ro);return result;}
-export const text=t;
+
 for(const [es,en,ro] of [
- ['Objetivos de demostración','Demo goals','Obiective demonstrative'],
  ['Detalle del movimiento local','Local transaction details','Detaliile tranzacției locale'],
  ['La clasificación importada se mantiene solo en memoria.','Imported categories are kept in memory only.','Categoriile importate sunt păstrate doar în memorie.'],
  [' de ',' of ',' din '],
 ])dictionary.set(es.trim(),{en:en.trim(),ro:ro.trim()});
+for(const line of `
+DATOS LOCALES|LOCAL DATA|DATE LOCALE
+Tu dinero, con claridad.|Your money, clearly.|Banii tăi, cu claritate.
+Solo tus datos. Tus decisiones.|Only your data. Your decisions.|Doar datele tale. Deciziile tale.
+Tus cuentas y conexiones bancarias.|Your accounts and bank connections.|Conturile și conexiunile tale bancare.
+Solo en este navegador. Los datos de la sesión se borran al recargar.|Only in this browser. Session data is cleared on reload.|Doar în acest browser. Datele sesiunii se șterg la reîncărcare.
+Empieza con tus propios datos|Start with your own data|Începe cu propriile date
+Importa un extracto PDF, CSV o MT940. Nada se envía a un servidor.|Import a PDF, CSV or MT940 statement. Nothing is sent to a server.|Importă un extras PDF, CSV sau MT940. Nimic nu este trimis la un server.
+Todavía no hay movimientos|No transactions yet|Nu există încă tranzacții
+Importa tu primer extracto para empezar.|Import your first statement to get started.|Importă primul extras pentru a începe.
+Todos los periodos|All periods|Toate perioadele
+Saldo al cierre del extracto|Statement closing balance|Soldul final al extrasului
+No es un saldo bancario en tiempo real.|This is not a real-time bank balance.|Acesta nu este un sold bancar în timp real.
+Todavía no hay objetivos|No goals yet|Nu există încă obiective
+Crea una meta con el importe y la fecha que tú elijas.|Create a goal with your chosen amount and date.|Creează un obiectiv cu suma și data alese de tine.
+No hay tarjetas conectadas|No connected cards|Nu există carduri conectate
+Importar un extracto no conecta una tarjeta ni recupera sus datos.|Importing a statement does not connect a card or retrieve its details.|Importarea unui extras nu conectează un card și nu îi preia datele.
+Cuentas importadas|Imported accounts|Conturi importate
+Importa un extracto para ver tus cuentas.|Import a statement to see your accounts.|Importă un extras pentru a vedea conturile tale.
+Movimientos importados|Imported transactions|Tranzacții importate
+Limpiar filtros|Clear filters|Șterge filtrele
+No hay datos en el periodo seleccionado.|No data in the selected period.|Nu există date în perioada selectată.
+No hay gastos en el periodo seleccionado.|No expenses in the selected period.|Nu există cheltuieli în perioada selectată.
+Los cálculos usan únicamente los movimientos importados del periodo seleccionado.|Calculations use only imported transactions in the selected period.|Calculele folosesc doar tranzacțiile importate din perioada selectată.
+Puedes corregir la categoría desde el detalle de cada movimiento.|You can correct categories in transaction details.|Poți corecta categoriile în detaliile fiecărei tranzacții.
+La comparación no verifica si los extractos de ambos meses están completos.|The comparison does not verify whether both months' statements are complete.|Comparația nu verifică dacă extrasele ambelor luni sunt complete.
+Importa también el mes anterior para comparar.|Import the previous month as well to compare.|Importă și luna precedentă pentru a compara.
+Solo se muestran los movimientos que marques como recurrentes.|Only transactions you mark as recurring are shown.|Sunt afișate doar tranzacțiile pe care le marchezi ca recurente.
+Importa datos para comparar el ahorro con tus ingresos y gastos.|Import data to compare savings with your income and expenses.|Importă date pentru a compara economiile cu veniturile și cheltuielile tale.
+Límite total|Total limit|Limită totală
+Sin conexión bancaria|No bank connection|Fără conexiune bancară
+Solo tus importaciones|Only your imports|Doar importurile tale
+No hay autenticación ni conexión bancaria activa. No se guardan extractos en el servidor ni en localStorage.|There is no authentication or active bank connection. Statements are not saved on the server or in localStorage.|Nu există autentificare sau conexiune bancară activă. Extrasele nu sunt salvate pe server sau în localStorage.
+Datos de la sesión|Session data|Datele sesiunii
+La exportación descarga una copia local de tus datos. Guárdala en un lugar seguro.|Export downloads a local copy of your data. Keep it somewhere safe.|Exportul descarcă o copie locală a datelor tale. Păstreaz-o într-un loc sigur.
+Exportar datos|Export data|Exportă datele
+Eliminar datos de sesión|Delete session data|Șterge datele sesiunii
+Datos de sesión eliminados|Session data deleted|Datele sesiunii au fost șterse
+Se eliminarán los movimientos importados, objetivos y presupuestos de esta sesión. Esta acción no se puede deshacer.|Imported transactions, goals and budgets from this session will be deleted. This cannot be undone.|Tranzacțiile importate, obiectivele și bugetele acestei sesiuni vor fi șterse. Acțiunea nu poate fi anulată.
+Solo tus datos|Only your data|Doar datele tale
+Importe objetivo|Target amount|Sumă țintă
+Ahorro actual|Current savings|Economii actuale
+Marcar como recurrente|Mark as recurring|Marchează ca recurent
+`.trim().split('\n')){const[es,en,ro]=line.split('|');dictionary.set(es,{en,ro})}

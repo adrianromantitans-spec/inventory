@@ -403,3 +403,5 @@ La aportación no permite un plazo razonable. Ajusta el objetivo o el presupuest
 `.trim().split('\n')){const[es,en,ro]=line.split('|');dictionary.set(es,{en,ro})}
 dictionary.set('Saldo no disponible',{en:'Balance unavailable',ro:'Sold indisponibil'});
 dictionary.set('No se pudo cargar el lector PDF. Conecta el móvil a Internet y vuelve a abrir la app para descargar sus componentes locales.',{en:'The PDF reader could not load. Connect your phone to the Internet and reopen the app to download its local components.',ro:'Cititorul PDF nu a putut fi încărcat. Conectează telefonul la internet și redeschide aplicația pentru a descărca componentele locale.'});
+dictionary.set('Falta descripción',{en:'Missing description',ro:'Lipsește descrierea'});
+dictionary.set('Falta importe',{en:'Missing amount',ro:'Lipsește suma'});

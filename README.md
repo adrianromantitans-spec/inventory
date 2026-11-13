@@ -24,3 +24,9 @@ Manifest, icono SVG y service worker de caché del shell en compilación de prod
 ## Integración real
 
 Consultar `server/README.md` y `src/banking.js`. La integración, autenticación, biometría y cifrado de datos reales están pendientes de proveedor e infraestructura. La aplicación solo está habilitada para demostración. No introducir información financiera privada.
+
+## Publicación con Pages desde main
+
+La raíz contiene `index.html`, `assets/`, manifest, icono y service worker compilados para que Pages pueda servir `main / (root)` directamente. `.nojekyll` conserva los archivos sin procesamiento. El HTML editable es `application.html`; Vite lo sirve durante desarrollo y genera `dist/index.html` durante compilación.
+
+Tras cambios de código, ejecutar `npm run publish:static`, revisar y subir los archivos generados junto al código fuente. No editar manualmente los bundles. También se conserva el workflow de GitHub Actions para quien configure Pages con esa modalidad.

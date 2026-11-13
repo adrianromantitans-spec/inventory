@@ -1,0 +1,3 @@
+// This frontend never receives provider credentials or tokens.
+export const bankApi={async status(){const r=await fetch('/api/banking/status',{credentials:'same-origin',cache:'no-store'});if(!r.ok||!r.headers.get('content-type')?.includes('application/json'))throw new Error('Proveedor no configurado');return r.json()},async sync(){const r=await fetch('/api/banking/sync',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'}});if(!r.ok)throw new Error(r.status===401?'Consentimiento caducado. Vuelve a conectar tu banco.':'No se ha podido sincronizar');return r.json()}};
+export function deduplicate(rows){return [...new Map(rows.map(t=>[`${t.account}:${t.id}`,t])).values()]}

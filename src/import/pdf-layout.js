@@ -13,9 +13,16 @@ function positionedLines(items){
 }
 function detectHeader(lines,index){
   const line=lines[index];
+  if(line.items.some(item=>datePattern.test(item.text.trim())))return null;
+  // A balance summary above the table must not become its balance column.
+  if(!line.items.some(item=>[item.text,...item.text.split(/\s+/)].some(text=>{const type=headerType(text);return type&&type!=='balance'})))return null;
   const candidates=[line];
-  const next=lines[index+1];
-  if(next&&next.y-line.y<19&&!next.items.some(i=>datePattern.test(i.text.trim()))&&next.items.some(i=>headerType(i.text)))candidates.push(next);
+  // Banks wrap headings over several baselines. Stop before any dated row.
+  for(let n=1;n<4&&index+n<lines.length;n++){
+    const next=lines[index+n];
+    if(next.y-line.y>44||next.items.some(i=>datePattern.test(i.text.trim())))break;
+    candidates.push(next);
+  }
   const columns=[];
   for(const candidate of candidates){
     const pieces=[];
@@ -30,8 +37,8 @@ function detectHeader(lines,index){
       if(type&&!columns.some(c=>c.type===type))columns.push({type,x:item.x,width,center:item.x+width/2});
     }
   }
-  if(!columns.some(c=>c.type==='date')||!columns.some(c=>c.type==='description')||!columns.some(c=>['amount','debit','credit'].includes(c.type))||!columns.some(c=>c.type==='balance'))return null;
-  return {columns:columns.sort((a,b)=>a.x-b.x),skip:candidates.length-1};
+  if(!columns.some(c=>c.type==='date')||!columns.some(c=>c.type==='description')||!columns.some(c=>['amount','debit','credit'].includes(c.type)))return null;
+  return {columns:columns.sort((a,b)=>a.x-b.x),skip:Math.max(0,...candidates.map((candidate,i)=>candidate.items.some(item=>headerType(item.text)||item.text.split(/\s+/).some(word=>headerType(word)))?i:0))};
 }
 function extractBalance(line,kind){const s=fold(line.text);const pattern=kind==='opening'?/\b(?:sold initial|sold precedent|opening balance|initial balance|balance brought forward|saldo inicial)\b/:/\b(?:sold final|sold nou|closing balance|final balance|saldo final)\b/;if(!pattern.test(s))return undefined;const matches=line.text.match(/[+-]?(?:\d{1,3}(?:[.,\s]\d{3})+|\d+)[.,]\d{2}/g);if(!matches)return undefined;try{return parseAmount(matches.at(-1))}catch{return undefined}}
 const footer=s=>/^(?:pagina\b|page\b|pag\.?\s*\d|total\b|rulaj total\b|total rulaj\b|banca transilvania\b|extras de cont\b|account statement\b|continuare\b|report generat\b|generated\b|www\.|cui\b|iban\b|titular\b|sold (?:initial|final|precedent|nou)\b|opening balance\b|closing balance\b|sold disponibil\b|available balance\b)/.test(fold(s));
